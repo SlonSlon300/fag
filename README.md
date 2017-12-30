@@ -1,2 +1,2 @@
 # fag
-ssh user@ip 'bash -s' < linenu.sh
+ssh user@ip 'bash -s' < linenu.sh > info.txt
